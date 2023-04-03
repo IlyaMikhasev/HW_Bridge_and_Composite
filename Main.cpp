@@ -20,5 +20,7 @@ int main() {
 	for (size_t i = 0; i < 4; i++)
 		HangarUC->addCar(AccauntingStock(new UsedCar()));
 	std::cout << "Price all used cars = " << HangarUC->getPrice();
+	delete HangarNC;
+	delete HangarUC;
 	return 0;
 }

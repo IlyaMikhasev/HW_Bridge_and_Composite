@@ -5,7 +5,9 @@ class Cars
 public:
 	Cars(CarCondition* state) :_state(state) {}
 	virtual int getPrice() = 0;
-	virtual ~Cars() {}
+	virtual ~Cars() {
+		delete _state;
+	}
 protected:
 	CarCondition* _state;
 };
